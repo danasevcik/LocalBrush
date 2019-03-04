@@ -1,0 +1,22 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <%= error %>
+    <% end %>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.label 'Name' %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label 'Zip Code' %><br>
+  <%= f.number_field :zip_code %><br>
+  <%= f.label 'Email' %><br>
+  <%= f.text_field :email %><br>
+  <%= f.label 'Home Type' %><br>
+  <select name="house_style">
+    <option value="Apartment">Apartment</option>
+    <option value="House">House</option>
+    <option value="Condo">Condo</option>
+    <option value="Townhouse">Townhouse</option>
+</select><br>
+  <%= f.submit %>
+<% end %>
