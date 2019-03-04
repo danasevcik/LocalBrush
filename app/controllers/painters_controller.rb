@@ -1,5 +1,9 @@
 class PaintersController < ApplicationController
 
+  def login
+    render 'login'
+  end
+
   def new
     @painter = Painter.new
   end

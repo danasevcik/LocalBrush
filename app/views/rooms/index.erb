@@ -1,0 +1,15 @@
+<h1>ALL ROOMS🎨</h1>
+<% @rooms.each do |room| %>
+
+<ul>
+  <% if !(room.assigned?) %>
+    <li>
+      Username: <%= room.user.name %><br>
+      Zip Code: <%= room.user.zip_code %><br>
+      Price: $<%= room.price %>
+      <%= button_to("SEE THIS ROOM", room_path(room), :method => :get) %>
+    </li>
+<% end %>
+</ul>
+
+<% end  %>

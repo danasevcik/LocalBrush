@@ -1,0 +1,11 @@
+<h1>THIS ROOM</h1>
+<p>Area:</p>
+<%= @room.area %>
+<p>Price:</p>
+<%= @room.price %>
+<p>Contact:</p>
+<ul>
+  <li>Name: <%= @room.user.name %></li>
+  <li>Email: <%= @room.user.email %></li>
+</ul>
+<%= button_to("ACCEPT THIS PAINT JOB", projects_path, :method => :post, params: {user_id: @room.user.id}) %>

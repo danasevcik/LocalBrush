@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_182722) do
+ActiveRecord::Schema.define(version: 2019_03_04_191159) do
 
   create_table "painters", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_182722) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "assigned?", default: false
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 

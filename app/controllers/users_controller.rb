@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def login
+    render 'login'
+  end
+
   def new
     @user = User.new
   end
@@ -17,6 +21,9 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end
   end
+
+  # edit user page
+
 
   private
 
