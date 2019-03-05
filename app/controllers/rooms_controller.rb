@@ -1,7 +1,6 @@
 class RoomsController < ApplicationController
-  # skip_before_action
-  # skip_before_action :painter_authorized?, except: [:new]
-  # before_action :check_privileges, only: [:new]
+  skip_before_action :painter_authorized?
+  skip_before_action :user_authorized?
 
   def index
     @rooms = Room.all
