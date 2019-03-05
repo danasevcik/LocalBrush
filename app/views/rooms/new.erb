@@ -4,10 +4,10 @@
     <% end %>
 <% end %>
 
+<h1><%= @user.name %>, ADD A NEW ROOM!</h1>
+
 <%= form_for @room do |f| %>
   <%= f.label "Area (total square footage)" %><br>
   <%= f.number_field :area %><br>
-  <%= f.label "User" %><br>
-  <%= f.collection_select(:user_id, @users, :id, :name) %><br>
   <%= f.submit %>
 <% end %>

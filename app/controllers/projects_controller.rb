@@ -8,11 +8,20 @@ class ProjectsController < ApplicationController
   def create
 
     # project = Project.new
+
+    project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
     byebug
-    project = Project.create()
     #session something
     #user id will be taken from params
+    # session[:painter_id] =
     #change room status to assigned? true
+
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(user_id:  params[:user_id], painter_id: session[:painter_id])
   end
 
 end

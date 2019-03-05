@@ -6,16 +6,18 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
-    @user = @room.user
+    @user = User.find(session[:user_id])
   end
 
   def new
     @room = Room.new
+    @user = User.find(session[:user_id])
     @users = User.all
   end
 
   def create
-    room = Room.create(room_params)
+    # byebug
+    room = Room.create(area: params[:room][:area], user_id: session[:user_id])
     if room.valid?
       redirect_to rooms_path
     else
