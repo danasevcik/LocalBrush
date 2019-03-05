@@ -25,7 +25,7 @@ class PaintersController < ApplicationController
   private
 
   def painter_params
-    params.require(:painter).permit(:name, :zip_code, :email, :y_of_exp)
+    params.require(:painter).permit(:username, :password, :name, :zip_code, :email, :y_of_exp)
   end
 
 end
