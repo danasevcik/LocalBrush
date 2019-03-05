@@ -1,0 +1,16 @@
+<h1>Painter Login</h1>
+
+<%= button_to("NEW PAINTER SIGN UP", new_painter_path, :method => :get) %>
+
+<h4><%= flash[:notice] %></h4>
+
+<!-- (painter) form will POST to '/login' -->
+<%= form_tag(painter_login_path) do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+
+  <%= submit_tag 'Login' %>
+<% end %>

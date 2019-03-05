@@ -1,7 +1,13 @@
 class Painter < ApplicationRecord
+  has_secure_password
   has_many :reviews
   has_many :projects
   has_many :users, through: :projects
+
+  validates :username, presence: true
+  validates :username, uniqueness: true
+
+  validates :password, presence: true
 
   validates :name, presence: true
   validates :name, uniqueness: true
