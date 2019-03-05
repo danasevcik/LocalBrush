@@ -6,11 +6,20 @@ class ProjectsController < ApplicationController
   # end
 
   def create
-
-    # project = Project.new
-
-    project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
     byebug
+    project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
+    #change the room assignment to true
+    #won't show up in room index anymore
+    room = Room.find(params[:room_id])
+    byebug
+    room.update(assigned?: true)
+    redirect_to rooms_path
+
+
+
+
+    # byebug
+
     #session something
     #user id will be taken from params
     # session[:painter_id] =
