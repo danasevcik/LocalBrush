@@ -10,7 +10,7 @@ class Painter < ApplicationRecord
   validates :password, presence: true
 
   validates :name, presence: true
-  validates :name, uniqueness: true
+  # validates :name, uniqueness: true
 
   validates :zip_code, presence: true
 
