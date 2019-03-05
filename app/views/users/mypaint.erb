@@ -2,7 +2,10 @@
 <% if @my_projects != [] %>
 <ul>
   <% @my_projects.each do |project| %>
-    <li>Accepted by: <%= link_to project.painter.name, painter_path(project.painter) %></li>
+    <li>
+      Accepted by: <%= link_to project.painter.name, painter_path(project.painter) %><br>
+      Leave a review: <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}) %>
+    </li>
   <% end %>
 </ul>
 

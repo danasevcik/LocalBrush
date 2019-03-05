@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
   def show
     # byebug
     @room = Room.find(params[:id])
-    @user = User.find(session[:this_session_number])
+    @user = @room.user
   end
 
   def new

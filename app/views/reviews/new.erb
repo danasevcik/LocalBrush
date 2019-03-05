@@ -1,0 +1,9 @@
+
+<%= form_for @review do |f| %>
+  <%= f.label "Your Review" %><br>
+  <%= f.text_field :content %><br>
+  <%= f.label "Leave a number 1-5" %><br>
+  <%= f.number_field :rating %><br>
+  <%= f.hidden_field :painter_id, :value => params[:painter_id] %>
+  <%= f.submit %>
+<% end %>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/userlogin', to: 'userlogin#create'
   get '/my_painters', to: 'users#mypainters', as: 'my_painters'
   get '/my_rooms', to: 'users#myroom', as: 'my_rooms'
+  # get '/new_review', to: 'users#review', as: 'new_review'
   resources :reviews
   resources :projects
   resources :rooms
