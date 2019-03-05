@@ -1,0 +1,14 @@
+<h1>All project info</h1>
+<% if @my_projects != [] %>
+<ul>
+  <% @my_projects.each do |project| %>
+    <li>Accepted by: <%= link_to project.painter.name, painter_path(project.painter) %></li>
+  <% end %>
+</ul>
+
+<%else  %>
+<p>You do not have any projects yet.</p>
+<%= button_to 'See all my posted rooms', my_rooms_path(session[:this_session_number]), :method => 'get' %>
+<%= button_to 'Return to my page', user_path(session[:this_session_number]), :method => 'get' %>
+<%= button_to 'Add a room', new_room_path, :method => 'get'%>
+<%end  %>

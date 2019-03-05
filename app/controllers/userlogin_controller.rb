@@ -1,7 +1,9 @@
 class UserloginController < ApplicationController
-
+  skip_before_action :painter_authorized?
+  skip_before_action :user_authorized?, only: [:login, :create]
+  
   def login
-    render 'user_login_page'
+    render 'login'
   end
 
   def create #handles the POST request to /user_login
@@ -11,7 +13,7 @@ class UserloginController < ApplicationController
   # authenticate this@user; determine if they provided the correct pw
     if @user && @user.authenticate(params[:password])
       # once we have found the@user, create a new session for them
-      session[:user_id] = @user.id
+      session[:this_session_number] = @user.id
       # redirect_to user_path(@user)
       redirect_to @user
     else

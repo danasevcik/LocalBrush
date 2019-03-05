@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  # get '/', to: 'login#home', as: 'homepage'
+  root 'login#home', as: 'homepage'
+  # root :to => "login#home"
   get '/painterlogin', to: 'painterlogin#login', as: 'painter_login'
   get '/userlogin', to: 'userlogin#login', as: 'user_login'
   post '/painterlogin', to: 'painterlogin#create'
   post '/userlogin', to: 'userlogin#create'
-  root :to => "login#home"
+  get '/my_painters', to: 'users#mypainters', as: 'my_painters'
+  get '/my_rooms', to: 'users#myroom', as: 'my_rooms'
   resources :reviews
   resources :projects
   resources :rooms

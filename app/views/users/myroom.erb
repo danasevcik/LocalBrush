@@ -1,0 +1,14 @@
+<h1>MY ROOMS</h1>
+<% if @my_rooms != [] %>
+<ul>
+  <% @my_rooms.each do |room| %>
+    <li> <%= link_to "#{room.area} sqft - $#{room.price} - #{room.assigned? ? "Painted" : "Not Painted Yet"}", room %></li>
+    <%# img attribute %>
+  <% end %>
+</ul>
+
+<%else  %>
+<p>You do not have any rooms yet.</p>
+<%= button_to 'Return to my page', user_path(session[:this_session_number]), :method => 'get' %>
+<%= button_to 'Add a room', new_room_path, :method => 'get'%>
+<%end  %>

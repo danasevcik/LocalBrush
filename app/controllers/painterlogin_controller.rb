@@ -1,6 +1,9 @@
 class PainterloginController < ApplicationController
+  skip_before_action :user_authorized?
+  skip_before_action :painter_authorized?, only: [:login, :create]
+
   def login
-    render 'painter_login_page'
+    render 'login'
   end
 
   def create #handles the POST request to /painter_login
@@ -10,7 +13,7 @@ class PainterloginController < ApplicationController
   # authenticate this@painter; determine if they provided the correct pw
     if @painter && @painter.authenticate(params[:password])
       # once we have found the@painter, create a new session for them
-      session[:painter_id] = @painter.id
+      session[:this_session_number] = @painter.id
       # redirect_to painter_path(@painter)
       redirect_to @painter
     else

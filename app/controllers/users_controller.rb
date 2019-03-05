@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :painter_authorized?
+  skip_before_action :user_authorized?, only: [:login, :new, :create]
 
   def login
     render 'login'
@@ -21,6 +23,19 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end
   end
+
+    def mypainters
+      @my_projects = Project.all.where(user_id: session[:this_session_number]).to_a
+      # @my_projects = User.find(session[:this_session_number])
+      # byebug
+      render :mypaint
+    end
+
+    def myroom
+      @my_rooms = Room.all.where(user_id: session[:this_session_number]).to_a
+    end
+
+
 
   # edit user page
 
