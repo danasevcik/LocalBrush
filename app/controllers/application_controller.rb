@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
 
   def current_user
     # User.find would throw an error if we cannot find the user
-    User.find_by({ id: session[:this_session_number] })
+    User.find_by({ id: session[:user_id] })
   end
 
   def current_painter
     # Painter.find would throw an error if we cannot find the painter
-    Painter.find_by({ id: session[:this_session_number] })
+    Painter.find_by({ id: session[:painter_id] })
   end
 
   def user_logged_in?

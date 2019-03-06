@@ -25,14 +25,14 @@ class UsersController < ApplicationController
   end
 
     def mypainters
-      @my_projects = Project.all.where(user_id: session[:this_session_number]).to_a
-      # @my_projects = User.find(session[:this_session_number])
+      @my_projects = Project.all.where(user_id: session[:user_id]).to_a
+      # @my_projects = User.find(session[:user_id])
       # byebug
       render :mypaint
     end
 
     def myroom
-      @my_rooms = Room.all.where(user_id: session[:this_session_number]).to_a
+      @my_rooms = Room.all.where(user_id: session[:user_id]).to_a
     end
 
 

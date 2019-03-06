@@ -9,6 +9,6 @@
 
 <%else  %>
 <p>You do not have any rooms yet.</p>
-<%= button_to 'Return to my page', user_path(session[:this_session_number]), :method => 'get' %>
+<%= button_to 'Return to my page', user_path(session[:user_id]), :method => 'get' %>
 <%= button_to 'Add a room', new_room_path, :method => 'get'%>
 <%end  %>

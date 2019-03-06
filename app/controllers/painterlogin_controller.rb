@@ -13,7 +13,8 @@ class PainterloginController < ApplicationController
   # authenticate this@painter; determine if they provided the correct pw
     if @painter && @painter.authenticate(params[:password])
       # once we have found the@painter, create a new session for them
-      session[:this_session_number] = @painter.id
+      session[:painter_id] = @painter.id
+      session[:user_id] = nil
       # redirect_to painter_path(@painter)
       redirect_to @painter
     else

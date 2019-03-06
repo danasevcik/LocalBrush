@@ -14,17 +14,22 @@ class RoomsController < ApplicationController
     # byebug
     @room = Room.find(params[:id])
     @user = @room.user
+    if session[:user_id]
+      render 'show_for_user'
+    elsif session[:painter_id]
+      render :show
+    end
   end
 
   def new
     @room = Room.new
-    @user = User.find(session[:this_session_number])
+    @user = User.find(session[:user_id])
     @users = User.all
   end
 
   def create
     # byebug
-    room = Room.create(area: params[:room][:area], user_id: session[:this_session_number])
+    room = Room.create(area: params[:room][:area], user_id: session[:user_id])
     if room.valid?
       redirect_to rooms_path
     else

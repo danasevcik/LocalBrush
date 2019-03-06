@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 
   def create
     # byebug
-    project = Project.create(user_id: params[:user_id], painter_id: session[:this_session_number])
+    project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
     #change the room assignment to true
     #won't show up in room index anymore
     room = Room.find(params[:room_id])
@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(user_id:  params[:user_id], painter_id: session[:this_session_number])
+    params.require(:project).permit(user_id:  params[:user_id], painter_id: session[:painter_id])
   end
 
 end
