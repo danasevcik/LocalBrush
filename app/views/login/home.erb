@@ -3,9 +3,11 @@
 <%= button_to('PAINTER', painter_login_path, :method => :get) %>
 <%= button_to('PAINTEE', user_login_path, :method => :get) %>
 <p>
-NOTES FOR TOMORROW
-1. Give user ability to see all reviews they have written
-2. Show number of reviews for each painter
-3. Create logout button (visible on every page)
-4. Give painter ability to see all their jobs
+NOTES FOR TOMORROW <br>
+1. add image resource attribute to rooms.
+  rails g migration add_image_url_to_rooms image_url:string
+
+<br>
+3. styling
+
 </p>

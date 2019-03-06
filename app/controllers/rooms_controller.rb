@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
 
   def create
     # byebug
-    room = Room.create(area: params[:room][:area], user_id: session[:user_id])
+    room = Room.create(area: params[:room][:area], user_id: session[:user_id], image: params[:room][:image])
     if room.valid?
       redirect_to rooms_path
     else
@@ -38,10 +38,19 @@ class RoomsController < ApplicationController
     end
   end
 
+  # def upload
+  #   room = Room.create(area: params[:room][:area], user_id: session[:user_id])
+  #   uploaded_io = params[:room][:picture]
+  #   File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+  #     file.write(uploaded_io.read)
+  #   end
+  #   File.rename("public/uploads/#{uploaded_io.original_filename}","public/uploads/#{room.user.username}#{room.id}.png")
+  # end
+
   private
 
   def room_params
-    params.require(:room).permit(:area, :user_id, :assigned?)
+    params.require(:room).permit(:area, :user_id, :assigned?, :image)
   end
 
 end

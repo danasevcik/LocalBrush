@@ -10,5 +10,10 @@
 <%= form_for @room do |f| %>
   <%= f.label "Area (total square footage)" %><br>
   <%= f.number_field :area %><br>
+  <%= f.file_field :image %>
+  <!-- <form action="">
+   <input type="file" name="image" accept="image/*">
+   <input type="submit">
+  </form> -->
   <%= f.submit %>
 <% end %>

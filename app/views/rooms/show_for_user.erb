@@ -3,6 +3,9 @@
 <%= @room.area %> sqft.
 <p>Price:</p>
 $<%= @room.price %>
+<br>
+<%= image_tag(@room.image.to_s, size: "300x300") %>
+
 <p>Contact:</p>
 <ul>
   <li>Name: <%= @user.name %></li>
