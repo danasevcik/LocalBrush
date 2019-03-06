@@ -11,3 +11,4 @@ $<%= @room.price %>
 
 
 <%= button_to("ACCEPT THIS PAINT JOB", projects_path, :method => :post, params: {user_id: @user.id, room_id: @room.id}) %>
+<%= button_to "LOGOUT", homepage_path, :method => 'get'%>

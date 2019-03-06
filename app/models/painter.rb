@@ -18,4 +18,15 @@ class Painter < ApplicationRecord
   validates :email, uniqueness: true
 
   validates :y_of_exp, presence: true
+
+  def rating_average
+    counter = self.reviews.count
+    total = 0
+    self.reviews.each do |review|
+      total += review.rating
+    end
+    avg = total.to_f / counter.to_f
+    avg
+  end
+
 end

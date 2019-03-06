@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       @my_rooms = Room.all.where(user_id: session[:user_id]).to_a
     end
 
-
+  
 
   # edit user page
 

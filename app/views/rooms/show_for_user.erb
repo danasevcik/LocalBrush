@@ -11,3 +11,4 @@ $<%= @room.price %>
 
 
 <%= button_to("GO BACK TO MY PAGE", user_path(session[:user_id]), :method => :get) %>
+<%= button_to "LOGOUT", homepage_path, :method => 'get'%>

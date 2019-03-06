@@ -4,7 +4,7 @@
     <% end %>
 <% end %>
 
-
+<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
  <%# this is for a brand new user signing up %>
 <%= form_for @user do |f| %>
   <%= f.label 'Username' %><br>
