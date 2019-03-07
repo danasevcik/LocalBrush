@@ -1,20 +1,28 @@
 <body id="userlogin">
-
+<div class="ui top attached button" tabindex="0"><%= link_to("NEW USER SIGN UP", new_user_path, :method => :get, class: 'css_class', style: 'color:#e22424') %></div>
 <h1>User Login</h1>
-
-<%= button_to("NEW USER SIGN UP", new_user_path, :method => :get) %>
 
 <h4><%= flash[:notice] %></h4>
 
-<!-- (user) form will POST to '/user_login' -->
+
+<%# SEMANTICS LOGIN %>
 <%= form_tag(user_login_path) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-
-  <%= submit_tag 'Login' %>
+  <div class="ui inverted segment">
+   <div class="ui inverted form">
+     <div class="two fields">
+       <div class="field">
+         <label>Username</label>
+         <%= text_field_tag :username %>
+       </div>
+       <div class="field">
+         <label>Password</label>
+         <%= password_field_tag :password %>
+       </div>
+     </div>
+     <!-- <div class="ui submit button">Submit</div> -->
+     <%= submit_tag 'Login' %>
+   </div>
+  </div>
 <% end %>
 
 </body>

@@ -15,7 +15,7 @@
 <h1><%= @painter.name %></h1>
 <h2>Number of Reviews: <%= @painter.reviews.count %> </h2>
 <% if @painter.reviews.count != 0 %>
-<h2>Average Rating: <%= @painter.rating_average %> </h2>
+<h2>Average Rating: <%= @painter.rating_average.round(1) %> </h2>
 <% end %>
 <ul>
 
