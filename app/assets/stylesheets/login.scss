@@ -1,15 +1,15 @@
 // Place all the styles related to the Login controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  background-image: url("https://i2.wp.com/www.graffitistreet.com/wp-content/uploads/2017/07/Sonny-street-art-mural-tiger-soho-new-york-city-project-cat-the-lisa-project-2017-photo-credit-just_a_spectator-23.jpeg?zoom=2.625&w=899&h=1195&crop&ssl=1");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.8;
-  filter: alpha(opacity=50);
-}
+// #homepage {
+//   background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: 0px 275px;
+//   background-size: contain;
+//   opacity: 0.8;
+//   filter: alpha(opacity=50);
+// }
 
 .ui .button {
   padding: 40px;
@@ -22,4 +22,24 @@ h1 {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 80px;
 
+}
+
+section.wrapper{
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  margin-top:80px;
+}
+
+.content p{
+  width: 900px;
+  margin: 30px auto;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 30px;
 }

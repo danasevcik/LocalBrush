@@ -1,7 +1,7 @@
 // Place all the styles related to the painterlogin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+#painterlogin {
   background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,4 +15,9 @@ h1 {
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
   color: black;
+}
+
+.ui .top .attached .button {
+  padding: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
