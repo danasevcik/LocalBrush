@@ -1,17 +1,21 @@
-<h1><%= @user.name.downcase %>'s room</h1>
-<p>Area:</p>
-<%= @room.area %> sqft.
-<p>Price:</p>
-$<%= @room.price %>
-<br>
-<%= image_tag(@room.image.to_s, size: "300x300") %>
+<body id="roomshow">
+  <div class="ui two top attached buttons">
+      <div class="ui button"><%= link_to("GO BACK TO MY PAGE", user_path(session[:user_id]), :method => :get, class: 'css_class', style: 'color:#e22424')%></div>
+      <div class="ui button"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
+  </div>
+  <h1><%= @user.name.downcase %>'s room</h1>
+  <p>Area:</p>
+  <%= @room.area %> sqft.
+  <p>Price:</p>
+  $<%= @room.price %>
+  <br>
+  <%= image_tag(@room.image.to_s, size: "300x300") %>
 
-<p>Contact:</p>
-<ul>
-  <li>Name: <%= @user.name %></li>
-  <li>Email: <%= @user.email %></li>
-</ul>
+  <p>Contact:</p>
+  <ul>
+    <li>Name: <%= @user.name %></li>
+    <li>Email: <%= @user.email %></li>
+  </ul>
 
 
-<%= button_to("GO BACK TO MY PAGE", user_path(session[:user_id]), :method => :get) %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+</body>

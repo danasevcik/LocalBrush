@@ -1,14 +1,19 @@
-<h1><%= @user.name.downcase %>'s room</h1>
-<p>Area:</p>
-<%= @room.area %> sqft.
-<p>Price:</p>
-$<%= @room.price %>
-<p>Contact:</p>
-<ul>
-  <li>Name: <%= @user.name %></li>
-  <li>Email: <%= @user.email %></li>
-</ul>
+<body id="roomshow">
+  <div class="ui two top attached buttons">
+      <div class="ui button"><%= link_to("ACCEPT THIS PAINT JOB", projects_path, :method => :post, params: {user_id: @user.id, room_id: @room.id}, class: 'css_class', style: 'color:#e22424')%></div>
+      <div class="ui button"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
+  </div>
+
+  <h1><%= @user.name.downcase %>'s room</h1>
+  <p>Area:</p>
+  <%= @room.area %> sqft.
+  <p>Price:</p>
+  $<%= @room.price %>
+  <p>Contact:</p>
+  <ul>
+    <li>Name: <%= @user.name %></li>
+    <li>Email: <%= @user.email %></li>
+  </ul>
 
 
-<%= button_to("ACCEPT THIS PAINT JOB", projects_path, :method => :post, params: {user_id: @user.id, room_id: @room.id}) %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+</body>
