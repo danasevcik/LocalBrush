@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     review = Review.create(painter_id: params[:review][:painter_id], content: params[:review][:content], rating: params[:review][:rating])
     #revist later for final customer experience
     if review.valid?
-      redirect_to user_path(session[:user_id])
+      redirect_to painter_path(params[:review][:painter_id])
     else
       flash[:errors] = review.errors.full_messages
       redirect_to new_review_path

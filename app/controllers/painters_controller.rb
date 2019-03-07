@@ -1,6 +1,6 @@
 class PaintersController < ApplicationController
   skip_before_action :user_authorized?
-  skip_before_action :painter_authorized?, only: [:login, :new, :create]
+  skip_before_action :painter_authorized?, only: [:login, :new, :create, :show]
 
   def login
     render 'login'
