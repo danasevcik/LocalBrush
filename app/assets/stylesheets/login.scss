@@ -1,3 +1,19 @@
 // Place all the styles related to the Login controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-image: url("https://i2.wp.com/www.graffitistreet.com/wp-content/uploads/2017/07/Sonny-street-art-mural-tiger-soho-new-york-city-project-cat-the-lisa-project-2017-photo-credit-just_a_spectator-23.jpeg?zoom=2.625&w=899&h=1195&crop&ssl=1");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.ui .button {
+  padding: 40px;
+
+}
+
+h1 {
+  text-align: center;
+  color: aqua;
+}

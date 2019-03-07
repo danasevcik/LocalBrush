@@ -1,13 +1,9 @@
+<body>
+<div class="ui two top attached buttons">
+    <div class="ui button"><%= link_to('ARE YOU A PAINTER?', painter_login_path, :method => :get) %></div>
+    <div class="ui button"><%= link_to('DO YOU NEED A ROOM PAINTED?', user_login_path, :method => :get) %></div>
+</div>
+<!-- <div class="ui attached segment">
+</div> -->
 <h1>WELCOME TO LOCAL BRUSH</h1>
-<h2>FIND YOUR LOCAL BRUSH HERE</h2>
-<%= button_to('PAINTER', painter_login_path, :method => :get) %>
-<%= button_to('PAINTEE', user_login_path, :method => :get) %>
-<p>
-NOTES FOR TOMORROW <br>
-1. add image resource attribute to rooms.
-  rails g migration add_image_url_to_rooms image_url:string
-
-<br>
-3. styling
-
-</p>
+</body>
