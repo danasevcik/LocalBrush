@@ -11,22 +11,44 @@
   <p></p>
 </div>
 
-
-<h1><%= @painter.name.downcase %></h1>
-<h2>Number of Reviews: <%= @painter.reviews.count %> </h2>
-<% if @painter.reviews.count != 0 %>
-<h2>Average Rating: <%= @painter.rating_average.round(1) %> </h2>
-<% end %>
-<ul>
-
-<% @painter.reviews.each do |review|  %>
-  <li> <% review.rating.times do %>
-     ⭐️
-    <%end  %> <br>
+<div class="name banner">
+  <h1 id="paintername"><%= @painter.name.downcase %></h1>
+  <h3 id="paintername">
+    <% if @painter.reviews.count != 0 %>
+      Average Rating: <%= @painter.rating_average.round(1) %>
+    <% end %>
+</h3>
+<h3 id="paintername">Number of Reviews: <%= @painter.reviews.count %></h3>
+</div>
 
 
+<!-- <div class="">
+  <% if @painter.reviews.count != 0 %>
+    <h2>Average Rating: <%= @painter.rating_average.round(1) %> </h2>
+  <% end %>
+</div> -->
 
-     <%= review.content %></li>
+<div id="painterreviewcard">
 
+  <% @painter.reviews.each do |review|  %>
+
+  <div class="ui card">
+    <div class="content">
+      <div class="header"></div>
+      <div class="description">
+        <p> <% review.rating.times do %>
+           ⭐️
+          <%end  %></p>
+          <p style="font-size: 15px; width: 250px; word-wrap: break-word;"> <%= review.content %></p>
+          <p></p>
+      </div>
+    </div>
+  </div>
   <%end  %>
-</ul>
+</div>
+
+
+
+
+
+<p>Number of Reviews: <%= @painter.reviews.count %></p>

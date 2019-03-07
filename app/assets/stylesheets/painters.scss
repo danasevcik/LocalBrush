@@ -12,3 +12,35 @@
 #text {
   color: white;
 }
+
+#newpainter {
+  background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px 275px;
+  background-size: contain;
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+}
+
+.name.banner {
+  background: black;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  opacity: 0.8;
+}
+
+#paintername {
+  color: white;
+}
+
+#contenttext {
+  font-size: 20px;
+  word-wrap: normal;
+}
+
+#painterreviewcard {
+  margin: auto;
+  width: auto;
+  padding: 10px;
+}

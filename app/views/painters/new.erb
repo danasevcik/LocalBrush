@@ -1,13 +1,12 @@
 <body>
 
-
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <%= error %>
     <% end %>
 <% end %>
 
-<h1>SIGN UP</h1>
+<h1>PAINTER SIGN UP</h1>
  <%# this is for a brand new painter signing up %>
    <div class="signup">
     <%= form_for @painter do |f| %>

@@ -1,28 +1,50 @@
-<% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <%= error %>
-    <% end %>
-<% end %>
+<body>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <%= error %>
+      <% end %>
+  <% end %>
 
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+  <h1>USER SIGN UP</h1>
  <%# this is for a brand new user signing up %>
-<%= form_for @user do |f| %>
-  <%= f.label 'Username' %><br>
-  <%= f.text_field :username %><br>
-  <%= f.label 'Password' %><br>
-  <%= f.password_field :password %><br>
-  <%= f.label 'Name' %><br>
-  <%= f.text_field :name %><br>
-  <%= f.label 'Zip Code' %><br>
-  <%= f.number_field :zip_code %><br>
-  <%= f.label 'Email' %><br>
-  <%= f.text_field :email %><br>
-  <%= f.label 'Home Type' %><br>
-  <select name="house_style">
-    <option value="Apartment">Apartment</option>
-    <option value="House">House</option>
-    <option value="Condo">Condo</option>
-    <option value="Townhouse">Townhouse</option>
-</select><br>
-  <%= f.submit %>
-<% end %>
+   <div class="signup">
+    <%= form_for @user do |f| %>
+    <div class="ui equal width form">
+      <div class="fields">
+        <div class="field">
+          <label id="text">Username</label>
+          <%= f.text_field :username %>
+        </div>
+        <div class="field">
+          <label id="text">Password</label>
+          <%= f.password_field :password %>
+        </div>
+      </div>
+      <div class="fields">
+        <div class="field">
+          <label id="text">Name</label>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <label id="text">Zip Code</label>
+          <%= f.number_field :zip_code %>
+        </div>
+        <div class="field">
+          <label id="text">Email</label>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <label id="text">Home Type</label>
+            <select name="house_style">
+              <option value="Apartment">Apartment</option>
+              <option value="House">House</option>
+              <option value="Condo">Condo</option>
+              <option value="Townhouse">Townhouse</option>
+            </select>
+        </div>
+      </div>
+      <%= f.submit :class => 'ui submit button' %>
+    </div>
+    <% end %>
+  </div>
+</body>
