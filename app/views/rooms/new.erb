@@ -1,16 +1,18 @@
 <body id="newroom">
-
-<% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <%= error %>
-    <% end %>
-<% end %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+<div class="ui top attached button" tabindex="0"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
+<%# <%= button_to "LOGOUT", homepage_path, :method => 'get'%>
 
 <h1><%= @user.name.downcase %>, add a new room!</h1>
 
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <h4><%= error %></h4>
+  <% end %>
+<% end %>
+<div id="projectcard">
+
 <%= form_for @room do |f| %>
-  <%= f.label "Area (total square footage)" %><br>
+  <%= f.label "area (total square footage)" %><br>
   <%= f.number_field :area %><br>
   <%= f.file_field :image %>
   <!-- <form action="">
@@ -19,5 +21,6 @@
   </form> -->
   <%= f.submit %>
 <% end %>
+</div>
 
 </body>

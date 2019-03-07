@@ -5,15 +5,15 @@
   </div>
 
   <h1><%= @user.name.downcase %>'s room</h1>
-  <p>Area:</p>
-  <%= @room.area %> sqft.
-  <p>Price:</p>
-  $<%= @room.price %>
-  <p>Contact:</p>
-  <ul>
-    <li>Name: <%= @user.name %></li>
-    <li>Email: <%= @user.email %></li>
-  </ul>
 
+  <div id="usercard">
+    area: <%= @room.area %> sqft. <br>
+    <p></p>
+    price: $<%= @room.price %> <br>
+    <p></p>
+    <p>contact:</p>
+      name: <%= @user.name %><br>
+      email: <%= @user.email %>
+  </div>
 
 </body>

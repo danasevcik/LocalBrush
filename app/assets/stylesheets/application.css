@@ -30,3 +30,14 @@
    margin: auto;
    color: #e22424;
  }
+
+ #projectcard {
+   background-color: lightgrey;
+   opacity: 0.8;
+   margin-right: 75%;
+   border-radius: 3px;
+   text-align: center;
+   margin-bottom: 15px;
+   margin-left: 10px;
+   padding: 20px 5px 20px 5px;
+ }

@@ -1,6 +1,9 @@
+<body id="paintername">
+
+
 <div class="ui two top attached buttons">
   <% if session[:painter_id] %>
-    <div class="ui button"><%= link_to "Find a new project", rooms_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></div>
+    <div class="ui button"><%= link_to "FIND A NEW PROJECT", rooms_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></div>
   <% end %>
   <% if session[:user_id] %>
   <div class="ui button"><%= link_to "GO BACK TO MY PAGE", user_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></div>
@@ -52,3 +55,4 @@
 
 
 <p>Number of Reviews: <%= @painter.reviews.count %></p>
+</body>

@@ -5,11 +5,10 @@
   <button class="ui button"><%= link_to "SEE ALL MY PAINTERS", my_painters_path, method: :get, class: 'css_class', style: 'color:#e22424' %></button>
   <button class="ui button"><%= link_to "SEE ALL MY ROOMS", my_rooms_path(@user), method: :get, class: 'css_class', style: 'color:#e22424' %></button>
 </div>
+<div class="ui bottom attached button" tabindex="0"><%= link_to "LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424'%></div>
 
 <h1>hello, <%= @user.name.downcase %>!</h1>
 
-
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
 
 
 </body>

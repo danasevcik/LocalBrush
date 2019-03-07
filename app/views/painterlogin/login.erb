@@ -1,7 +1,7 @@
 <body id="painterlogin">
 <div class="ui top attached button" tabindex="0"><%= link_to("NEW PAINTER SIGN UP", new_painter_path, :method => :get, class: 'css_class', style: 'color:#e22424') %></div>
 
-<h1>Painter Login</h1>
+<h1>painter login</h1>
 
 
 <h4><%= flash[:notice] %></h4>
@@ -13,11 +13,11 @@
    <div class="ui inverted form">
      <div class="two fields">
        <div class="field">
-         <label>Username</label>
+         <label>username</label>
          <%= text_field_tag :username %>
        </div>
        <div class="field">
-         <label>Password</label>
+         <label>password</label>
          <%= password_field_tag :password %>
        </div>
      </div>

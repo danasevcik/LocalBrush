@@ -1,24 +1,25 @@
 <body id="myrooms">
 
 <div class="three ui buttons">
-  <button class="ui button"><%= link_to 'Return to my page', user_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
-  <button class="ui button"><%= link_to 'Add a room', new_room_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to 'RETURN TO MY PAGE', user_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to 'ADD A ROOM', new_room_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
   <button class="ui button"><%= link_to "LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424'%></button>
 </div>
 
-<h1>MY ROOMS</h1>
+<h1>my rooms</h1>
 <% if @my_rooms != [] %>
 <ul>
   <% @my_rooms.each do |room| %>
-    <li> <%= link_to "#{room.area} sqft - $#{room.price} - #{room.assigned? ? "Painted" : "Not Painted Yet"}", room %></li>
+  <div id="projectcard">
+    <%= link_to "#{room.area} sqft - $#{room.price} - #{room.assigned? ? "Painted" : "Not Painted Yet"}", room %>
+  </div>
     <%# img attribute %>
   <% end %>
 </ul>
 
 <%else  %>
-<p>You do not have any rooms yet.</p>
-<%= button_to 'Return to my page', user_path(session[:user_id]), :method => 'get' %>
-<%= button_to 'Add a room', new_room_path, :method => 'get'%>
+<h4>you do not have any rooms yet</h4>
+
 <%end  %>
 
 </body>

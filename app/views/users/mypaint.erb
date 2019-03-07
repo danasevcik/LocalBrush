@@ -1,23 +1,28 @@
 <body id="mypainters">
+  <div class="ui bottom attached button" tabindex="0"><%= link_to "LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424'%></div>
 
-<h1>My Painters</h1>
+<h1>my painters</h1>
 <% if @my_projects != [] %>
 <ul>
   <% @my_projects.each do |project| %>
-    <li>
-      Accepted by: <%= link_to project.painter.name.downcase, painter_path(project.painter) %><br>
-      Leave a review: <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}) %>
-    </li>
+      <div id="projectcard">
+      accepted by: <%= link_to project.painter.name.downcase, painter_path(project.painter) %><br>
+      leave a review: <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}) %>
+      </div>
   <% end %>
 </ul>
 
 <%else  %>
-<p>You do not have any projects yet.</p>
-<%= button_to 'See all my posted rooms', my_rooms_path(session[:user_id]), :method => 'get' %>
-<%= button_to 'Return to my page', user_path(session[:user_id]), :method => 'get' %>
-<%= button_to 'Add a room', new_room_path, :method => 'get'%>
+<h4>you do not have any projects yet</h4>
+<div class="three ui buttons">
+<button class="ui button"><%= link_to 'SEE ALL MY POSTED ROOMS', my_rooms_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+<button class="ui button"><%= link_to 'RETURN TO MY PAGE', user_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+<button class="ui button"><%= link_to 'ADD A ROOM', new_room_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+</div>
 <%end  %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+
+
+
 
 
 </body>

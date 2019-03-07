@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   def create
     # byebug
     project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
-    byebug
+    # byebug
 
     #change the room assignment to true
     #won't show up in room index anymore

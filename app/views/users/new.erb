@@ -5,41 +5,41 @@
       <% end %>
   <% end %>
 
-  <h1>USER SIGN UP</h1>
+  <h1>user sign up</h1>
  <%# this is for a brand new user signing up %>
    <div class="signup">
     <%= form_for @user do |f| %>
     <div class="ui equal width form">
       <div class="fields">
         <div class="field">
-          <label id="text">Username</label>
+          <label id="text">username</label>
           <%= f.text_field :username %>
         </div>
         <div class="field">
-          <label id="text">Password</label>
+          <label id="text">password</label>
           <%= f.password_field :password %>
         </div>
       </div>
       <div class="fields">
         <div class="field">
-          <label id="text">Name</label>
+          <label id="text">name</label>
           <%= f.text_field :name %>
         </div>
         <div class="field">
-          <label id="text">Zip Code</label>
+          <label id="text">zip code</label>
           <%= f.number_field :zip_code %>
         </div>
         <div class="field">
-          <label id="text">Email</label>
+          <label id="text">email</label>
           <%= f.text_field :email %>
         </div>
         <div class="field">
-          <label id="text">Home Type</label>
+          <label id="text">home type</label>
             <select name="house_style">
-              <option value="Apartment">Apartment</option>
-              <option value="House">House</option>
-              <option value="Condo">Condo</option>
-              <option value="Townhouse">Townhouse</option>
+              <option value="Apartment">apartment</option>
+              <option value="House">house</option>
+              <option value="Condo">condo</option>
+              <option value="Townhouse">townhouse</option>
             </select>
         </div>
       </div>
