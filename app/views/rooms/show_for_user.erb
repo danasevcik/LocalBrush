@@ -11,11 +11,13 @@
     <p></p>
     price: $<%= @room.price %> <br>
     <p></p>
-    <%= image_tag(@room.image.to_s, size: "300x300") %>
+    <div id="image">
+      <%= image_tag(@room.image.to_s, size: "300x300") %>
+    </div>
     <p></p>
     <p>contact:</p>
-      name: <%= @user.name %><br>
-      email: <%= @user.email %>
+      name: <%= @user.name.downcase %><br>
+      email: <%= @user.email.downcase %>
   </div>
 
 </body>
