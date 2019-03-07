@@ -1,7 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#painterlogin {
+#usershow {
   background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,6 +9,27 @@
   background-size: contain;
   opacity: 0.8;
   filter: alpha(opacity=50);
+}
+#mypainters {
+  background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px 275px;
+  background-size: contain;
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+}
+#myrooms {
+  background-image: url("https://lh3.googleusercontent.com/RbLIrAIv1xMqiue88J2A3zr8C7nrYLvkHV5UrhKfCb_8h47pZxiuJn97XR9wAc7ogl3CxWAtOA=w640-h400-e365");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0px 275px;
+  background-size: contain;
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+}
+li {
+  color: black;
 }
 
 // .ui.submit.button {

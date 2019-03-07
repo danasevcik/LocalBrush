@@ -1,3 +1,6 @@
+<body id="leavereview">
+<h1>Leave A Review</h1>
+
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <%= error %>
@@ -11,3 +14,6 @@
   <%= f.hidden_field :painter_id, :value => params[:painter_id] %>
   <%= f.submit %>
 <% end %>
+
+
+</body>

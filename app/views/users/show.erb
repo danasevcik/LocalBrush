@@ -6,7 +6,7 @@
   <button class="ui button"><%= link_to "SEE ALL MY ROOMS", my_rooms_path(@user), method: :get, class: 'css_class', style: 'color:#e22424' %></button>
 </div>
 
-<h1>Hello, <%= @user.name %>!</h1>
+<h1>hello, <%= @user.name.downcase %>!</h1>
 
 
 <%= button_to "LOGOUT", homepage_path, :method => 'get'%>

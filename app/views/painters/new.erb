@@ -9,38 +9,40 @@
 
 <h1>SIGN UP</h1>
  <%# this is for a brand new painter signing up %>
-<%= form_for @painter do |f| %>
-<div class="ui equal width form">
-  <div class="fields">
-    <div class="field">
-      <label>Username</label>
-      <%= f.text_field :username %>
+   <div class="signup">
+    <%= form_for @painter do |f| %>
+    <div class="ui equal width form">
+      <div class="fields">
+        <div class="field">
+          <label id="text">Username</label>
+          <%= f.text_field :username %>
+        </div>
+        <div class="field">
+          <label id="text">Password</label>
+          <%= f.password_field :password %>
+        </div>
+      </div>
+      <div class="fields">
+        <div class="field">
+          <label id="text">Name</label>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <label id="text">Zip Code</label>
+          <%= f.number_field :zip_code %>
+        </div>
+        <div class="field">
+          <label id="text">Email</label>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <label id="text">Years of Experience</label>
+          <%= f.number_field :y_of_exp %>
+        </div>
+      </div>
+      <%= f.submit :class => 'ui submit button' %>
     </div>
-    <div class="field">
-      <label>Password</label>
-      <%= f.password_field :password %>
-    </div>
+    <% end %>
   </div>
-  <div class="fields">
-    <div class="field">
-      <label>Name</label>
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <label>Zip Code</label>
-      <%= f.number_field :zip_code %>
-    </div>
-    <div class="field">
-      <label>Email</label>
-      <%= f.text_field :email %>
-    </div>
-    <div class="field">
-      <label>Years of Experience</label>
-      <%= f.number_field :y_of_exp %>
-    </div>
-  </div>
-  <%= f.submit :class => 'ui submit button' %>
-</div>
-<% end %>
 
 </body>

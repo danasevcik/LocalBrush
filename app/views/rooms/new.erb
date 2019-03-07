@@ -1,3 +1,5 @@
+<body id="newroom">
+
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <%= error %>
@@ -5,7 +7,7 @@
 <% end %>
 <%= button_to "LOGOUT", homepage_path, :method => 'get'%>
 
-<h1><%= @user.name %>, ADD A NEW ROOM!</h1>
+<h1><%= @user.name.downcase %>, add a new room!</h1>
 
 <%= form_for @room do |f| %>
   <%= f.label "Area (total square footage)" %><br>
@@ -17,3 +19,5 @@
   </form> -->
   <%= f.submit %>
 <% end %>
+
+</body>

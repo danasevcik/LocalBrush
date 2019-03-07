@@ -1,9 +1,11 @@
-<h1>All project info</h1>
+<body id="mypainters">
+
+<h1>My Painters</h1>
 <% if @my_projects != [] %>
 <ul>
   <% @my_projects.each do |project| %>
     <li>
-      Accepted by: <%= link_to project.painter.name, painter_path(project.painter) %><br>
+      Accepted by: <%= link_to project.painter.name.downcase, painter_path(project.painter) %><br>
       Leave a review: <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}) %>
     </li>
   <% end %>
@@ -16,3 +18,6 @@
 <%= button_to 'Add a room', new_room_path, :method => 'get'%>
 <%end  %>
 <%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+
+
+</body>
