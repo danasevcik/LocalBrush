@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  # skip_before_action :user_authorized?
+  skip_before_action :user_authorized?
   skip_before_action :painter_authorized?
   # skip_before_action :authorized
   # def new
@@ -10,6 +10,8 @@ class ProjectsController < ApplicationController
   def create
     # byebug
     project = Project.create(user_id: params[:user_id], painter_id: session[:painter_id])
+    byebug
+
     #change the room assignment to true
     #won't show up in room index anymore
     room = Room.find(params[:room_id])

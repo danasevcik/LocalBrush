@@ -1,6 +1,6 @@
 <body id="roomshow">
   <div class="ui two top attached buttons">
-      <div class="ui button"><%= link_to("ACCEPT THIS PAINT JOB", projects_path, :method => :post, params: {user_id: @user.id, room_id: @room.id}, class: 'css_class', style: 'color:#e22424')%></div>
+      <div class="ui button"><%= link_to("ACCEPT THIS PAINT JOB", projects_path(user_id: @user.id, room_id: @room.id), :method => :post, class: 'css_class', style: 'color:#e22424')%></div>
       <div class="ui button"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
   </div>
 
