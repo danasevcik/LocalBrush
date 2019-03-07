@@ -1,6 +1,17 @@
+<div class="ui two top attached buttons">
+    <div class="ui button"><%= link_to "Find a new project", rooms_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></div>
+    <div class="ui button"><%= link_to "LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></div>
+</div>
+<div class="ui attached segment">
+  <p></p>
+</div>
+
+
 <h1><%= @painter.name %></h1>
 <h2>Number of Reviews: <%= @painter.reviews.count %> </h2>
+<% if @painter.reviews.count != 0 %>
 <h2>Average Rating: <%= @painter.rating_average %> </h2>
+<% end %>
 <ul>
 
 <% @painter.reviews.each do |review|  %>
@@ -14,6 +25,3 @@
 
   <%end  %>
 </ul>
-
-<%= button_to "Find a new project", rooms_path, :method => 'get' %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>

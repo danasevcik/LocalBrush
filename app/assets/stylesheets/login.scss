@@ -7,13 +7,19 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  opacity: 0.8;
+  filter: alpha(opacity=50);
 }
+
 .ui .button {
   padding: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
 
 }
 
 h1 {
   text-align: center;
-  color: aqua;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 80px;
+
 }

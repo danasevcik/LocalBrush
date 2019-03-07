@@ -1,3 +1,9 @@
+<div class="three ui buttons">
+  <button class="ui button"><%= link_to 'Return to my page', user_path(session[:user_id]), :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to 'Add a room', new_room_path, :method => 'get', class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to "LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424'%></button>
+</div>
+
 <h1>MY ROOMS</h1>
 <% if @my_rooms != [] %>
 <ul>
@@ -12,4 +18,3 @@
 <%= button_to 'Return to my page', user_path(session[:user_id]), :method => 'get' %>
 <%= button_to 'Add a room', new_room_path, :method => 'get'%>
 <%end  %>
-<%= button_to "LOGOUT", homepage_path, :method => 'get'%>
