@@ -6,16 +6,27 @@
 
 <h4><%= flash[:notice] %></h4>
 
-<!-- (painter) form will POST to 'painter login path' -->
+
+<%# SEMANTICS LOGIN %>
 <%= form_tag(painter_login_path) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %><br>
-  <p></p>
-
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-
-  <%= submit_tag 'Login' %>
+  <div class="ui inverted segment">
+   <div class="ui inverted form">
+     <div class="two fields">
+       <div class="field">
+         <label>Username</label>
+         <%= text_field_tag :username %>
+       </div>
+       <div class="field">
+         <label>Password</label>
+         <%= password_field_tag :password %>
+       </div>
+     </div>
+     <!-- <div class="ui submit button">Submit</div> -->
+     <%= submit_tag 'Login' %>
+   </div>
+  </div>
 <% end %>
+
+
 
 </body>
