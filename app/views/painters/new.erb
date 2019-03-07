@@ -1,23 +1,46 @@
+<body>
+
+
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
     <%= error %>
     <% end %>
 <% end %>
 
-
+<h1>SIGN UP</h1>
  <%# this is for a brand new painter signing up %>
 <%= form_for @painter do |f| %>
-  <%= f.label 'Username' %><br>
-  <%= f.text_field :username %><br>
-  <%= f.label 'Password' %><br>
-  <%= f.password_field :password %><br>
-  <%= f.label 'Name' %><br>
-  <%= f.text_field :name %><br>
-  <%= f.label 'Zip Code' %><br>
-  <%= f.number_field :zip_code %><br>
-  <%= f.label 'Email' %><br>
-  <%= f.text_field :email %><br>
-  <%= f.label 'Years of Experience' %><br>
-  <%= f.number_field :y_of_exp %><br>
-  <%= f.submit %>
+<div class="ui equal width form">
+  <div class="fields">
+    <div class="field">
+      <label>Username</label>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <%= f.password_field :password %>
+    </div>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <label>Name</label>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <label>Zip Code</label>
+      <%= f.number_field :zip_code %>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <label>Years of Experience</label>
+      <%= f.number_field :y_of_exp %>
+    </div>
+  </div>
+  <%= f.submit :class => 'ui submit button' %>
+</div>
 <% end %>
+
+</body>

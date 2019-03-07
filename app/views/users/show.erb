@@ -1,6 +1,15 @@
+<body id="usershow">
+
+<div class="three ui buttons">
+  <button class="ui button"><%= link_to "ADD A ROOM", new_room_path, method: :get, class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to "SEE ALL MY PAINTERS", my_painters_path, method: :get, class: 'css_class', style: 'color:#e22424' %></button>
+  <button class="ui button"><%= link_to "SEE ALL MY ROOMS", my_rooms_path(@user), method: :get, class: 'css_class', style: 'color:#e22424' %></button>
+</div>
+
 <h1>Hello, <%= @user.name %>!</h1>
 
-<%= button_to "ADD A ROOM", new_room_path, method: :get %>
-<%= button_to "SEE ALL MY PAINTERS", my_painters_path, method: :get %>
-<%= button_to "SEE ALL MY ROOMS", my_rooms_path(@user), method: :get %>
+
 <%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+
+
+</body>
