@@ -41,3 +41,9 @@
    margin-left: 10px;
    padding: 20px 5px 20px 5px;
  }
+.button_class {
+  background-color: black;
+  border-radius: 4.5px;
+  color: lightgrey;
+  font-family: 'Roboto Condensed', sans-serif;
+}

@@ -13,8 +13,8 @@
       <%= f.text_area :content %><br>
       <%= f.label "leave a number 1-5" %><br>
       <%= f.number_field :rating %><br>
-      <%= f.hidden_field :painter_id, :value => params[:painter_id] %>
-      <%= f.submit %>
+      <%= f.hidden_field :painter_id, :value => params[:painter_id] %><br>
+      <%= f.submit class: 'button_class' %>
     <% end %>
   </div>
 

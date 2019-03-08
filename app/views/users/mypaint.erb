@@ -6,8 +6,8 @@
 <ul>
   <% @my_projects.each do |project| %>
       <div id="projectcard">
-      accepted by: <%= link_to project.painter.name.downcase, painter_path(project.painter) %><br>
-      leave a review: <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}) %>
+      accepted by: <%= link_to project.painter.name.downcase, painter_path(project.painter) %><br><br>
+      <%= button_to("LEAVE A REVIEW", new_review_path, :method => :get, params: {painter_id: project.painter.id}, class: 'button_class') %>
       </div>
   <% end %>
 </ul>

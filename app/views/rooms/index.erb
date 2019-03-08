@@ -1,17 +1,16 @@
 <body id="allrooms">
 <div class="ui top attached button" tabindex="0"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
 <h1>available rooms🎨</h1>
-  <div id="projectcard">
-    <% @rooms.each do |room| %>
-      <!-- <div id="container"> -->
-      <% if !(room.assigned?) %>
-          username: <%= room.user.name %><br>
-          zip code: <%= room.user.zip_code %><br>
-          price: $<%= room.price %><br>
-          <%= button_to("SEE THIS ROOM", room_path(room), :method => :get) %><br>
-      <% end %>
-      <!-- </div> -->
-    <% end  %>
-  </div>
+
+  <% @rooms.each do |room| %>
+    <% if !(room.assigned?) %>
+      <div id="roomlist">
+        username: <%= room.user.name %><br>
+        zip code: <%= room.user.zip_code %><br>
+        price: $<%= room.price %><br>
+        <%= button_to("SEE THIS ROOM", room_path(room), :method => :get, class: 'button_class') %>
+      </div>
+    <% end %>
+  <% end  %>
 
 </body>

@@ -17,6 +17,7 @@ class PaintersController < ApplicationController
   def create
     painter = Painter.create(painter_params)
     if painter.valid?
+      session[:painter_id] = painter.id
       redirect_to painter
     else
       flash[:errors] = painter.errors.full_messages

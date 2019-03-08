@@ -1,6 +1,6 @@
 <body id="newroom">
 <div class="ui top attached button" tabindex="0"><%= link_to("LOGOUT", homepage_path, :method => 'get', class: 'css_class', style: 'color:#e22424') %></div>
-<%# <%= button_to "LOGOUT", homepage_path, :method => 'get'%>
+
 
 <h1><%= @user.name.downcase %>, add a new room!</h1>
 
@@ -13,13 +13,9 @@
 
 <%= form_for @room do |f| %>
   <%= f.label "area (total square footage)" %><br>
-  <%= f.number_field :area %><br>
-  <%= f.file_field :image %>
-  <!-- <form action="">
-   <input type="file" name="image" accept="image/*">
-   <input type="submit">
-  </form> -->
-  <%= f.submit %>
+  <%= f.number_field :area %><br><br>
+  <%= f.file_field :image%><br><br>
+  <%= f.submit class: 'button_class' %>
 <% end %>
 </div>
 

@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.valid?
+      session[:user_id] = user.id
       redirect_to user
     else
       flash[:errors] = user.errors.full_messages
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
       @my_rooms = Room.all.where(user_id: session[:user_id]).to_a
     end
 
-  
+
 
   # edit user page
 
