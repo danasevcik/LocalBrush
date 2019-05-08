@@ -1,24 +1,36 @@
-# README
+# LOCALBRUSH
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_Flatiron School Module 2 group project_
+_Dana, Michael, Nate_
 
-Things you may want to cover:
+[Link to BACKEND repo](https://github.com/stomg7969/ecommerce-solo-project-backend)
 
-* Ruby version
+[Link to Demo(Heroku)] heroku (url)
 
-* System dependencies
+### Dummy Account
 
-* Configuration
+- Painter
+  **ID:**
+  **PW:**
+- User
+  **ID:**
+  **PW:**
 
-* Database creation
+### Language
 
-* Database initialization
+- Ruby (Frontend)
+- Ruby on Rails with SQLite3 (Backend)
 
-* How to run the test suite
+### Features / App Description
 
-* Services (job queues, cache servers, search engines, etc.)
+write more
 
-* Deployment instructions
+- Users:
+  - Account ActiveRecord CRUD
+  - Post their rooms with price offer
+  - Upload picture of their rooms
+  - Post reviews and rate painters
+- Painter:, rooms, reviews, project(join)
+- upload picture, Auth with session_id and Bcrypt
 
-* ...
+### What I learned 1
