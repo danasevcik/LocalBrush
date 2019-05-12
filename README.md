@@ -10,6 +10,8 @@ _Dana, Michael, Nate_
 
 An online platform where painters can look for a painting project at desired price offer and where users (clients) can look for painters by post their room pictures with price offer.
 
+_**NOTE:** Must click on TEXT to go to a page._
+
 ### Dummy Account
 
 - **Painter**
