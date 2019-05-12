@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_03_06_200651) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "painters", force: :cascade do |t|
     t.string "name"
     t.integer "zip_code"
@@ -24,8 +27,8 @@ ActiveRecord::Schema.define(version: 2019_03_06_200651) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "painter_id"
+    t.bigint "user_id"
+    t.bigint "painter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["painter_id"], name: "index_projects_on_painter_id"
@@ -33,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_200651) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "painter_id"
+    t.bigint "painter_id"
     t.string "content"
     t.integer "rating"
     t.datetime "created_at", null: false
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_200651) do
 
   create_table "rooms", force: :cascade do |t|
     t.integer "area"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "assigned?", default: false
@@ -63,4 +66,8 @@ ActiveRecord::Schema.define(version: 2019_03_06_200651) do
     t.string "password_digest"
   end
 
+  add_foreign_key "projects", "painters"
+  add_foreign_key "projects", "users"
+  add_foreign_key "reviews", "painters"
+  add_foreign_key "rooms", "users"
 end

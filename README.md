@@ -27,7 +27,7 @@ An online platform where painters can look for a painting project at desired pri
 ### Language
 
 - Ruby (Frontend)
-- Ruby on Rails with SQLite3 (Backend)
+- Ruby on Rails with PostgreSQL (Backend)
 
 ### Features / App Description
 
