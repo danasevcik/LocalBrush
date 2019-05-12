@@ -4,7 +4,7 @@ _Flatiron School Module 2 group project_
 
 _Dana, Michael, Nate_
 
-[Link to Demo(Heroku)] heroku (url)
+[Link to Demo(Heroku)](https://localbrush.herokuapp.com/)
 
 ### About LocalBrush
 
